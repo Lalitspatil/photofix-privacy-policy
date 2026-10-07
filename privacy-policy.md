@@ -1,0 +1,116 @@
+# PhotoFix Privacy Policy
+
+**Effective date:** October 7, 2026  
+**Developer contact:** lalitspatil1260@gmail.com
+
+This draft describes the current PhotoFix Android app implementation. It is
+not legal advice. Review it against the release build, Google Play requirements,
+and the current documentation for every third-party SDK before publishing.
+
+## What PhotoFix does
+
+PhotoFix lets you select photos and prepare edited copies using tools such as
+compression, resizing, cropping, rotation, flipping, format conversion, ID
+photo sizing, and batch processing.
+
+## Photos and on-device processing
+
+When you choose photos, PhotoFix reads the selected image files and processes
+their image data on your device. PhotoFix's image-processing implementation
+does not send selected photos to a PhotoFix-operated server. PhotoFix does not
+currently operate its own backend or photo-processing API.
+
+PhotoFix keeps selected and processed image data in app memory while you use
+the editing workflow. The app code does not create a persistent PhotoFix
+library or account for selected photos. The Android image-picker plugin and
+operating system may use temporary resources while selecting media; their
+exact behavior can depend on the Android version and picker implementation.
+
+## Saving to your Gallery
+
+If you choose **Save to gallery**, PhotoFix writes the processed image to the
+device's public Pictures/Gallery media collection. The saved copy remains on
+your device until you or another app remove it. PhotoFix does not currently
+provide a separate in-app deletion or retention service for saved Gallery
+images; manage those copies using your device's Gallery or file-management
+tools.
+
+## Sharing
+
+If you choose **Share**, PhotoFix passes the selected processed image to the
+Android sharing interface so that you can choose another app or destination.
+On Android, the current sharing plugin stages a share copy in PhotoFix's
+app-private cache and clears that share cache when a later share operation is
+prepared. Android or the receiving app may also make its own copy.
+
+Sharing is initiated by you. After you send an image to another app or service,
+that recipient's privacy practices and handling of the file are outside
+PhotoFix's control. Review the recipient's policies before sharing.
+
+## Advertising and consent
+
+PhotoFix includes Google Mobile Ads (AdMob) for advertising and Google's
+consent-management functionality (Google User Messaging Platform, or UMP).
+Where applicable, UMP may request or present advertising consent choices.
+PhotoFix requests ads only when the consent SDK reports that ads may be
+requested. Ads may be unavailable because of consent, network availability, or
+ad-loading results; photo-editing features do not depend on ad availability.
+
+Google Mobile Ads and UMP are third-party services. Their SDKs and services
+may process information under Google's own policies and according to applicable
+settings and consent choices. The exact information involved can depend on the
+SDK version, Android version, Google configuration, and any later ad setup.
+This draft does not make a claim about an exact list of Google data fields.
+Verify Google's current documentation and the release configuration before
+publication.
+
+The app currently has an in-app **Privacy choices** entry when UMP indicates
+that a privacy-options form is required. The app does not show that entry when
+the SDK reports it is not required. The separate Privacy Policy entry remains
+unconfigured until a real policy URL is supplied.
+
+## Accounts, analytics, and crash reporting
+
+PhotoFix does not require an account or login. The current app code does not
+implement a PhotoFix-owned analytics or crash-reporting service. This does not
+describe any diagnostics or processing performed by third-party SDKs; verify
+those separately before release.
+
+## Data retention and deletion
+
+PhotoFix does not operate a backend for selected-photo processing and does not
+retain selected photos in a server account. Selected and processed bytes are
+used in the active editing workflow. A user-requested Gallery save creates a
+device-visible image that the user can manage on the device.
+
+For Android sharing, the current sharing plugin uses an app-private cache copy
+and clears its share cache when it prepares a subsequent share. The app does
+not configure a fixed retention period for this cache. The operating system
+manages cache storage, and a recipient may retain a shared copy independently.
+
+Because PhotoFix does not currently maintain user accounts or a PhotoFix
+photo-processing backend, there is no PhotoFix account-based deletion request
+or server photo store to access through the app. To remove a Gallery copy,
+delete it using the device's Gallery or file-management app. Contact the
+developer about questions using the contact placeholder above once it has
+been replaced with a monitored address.
+
+## Children's privacy
+
+PhotoFix does not ask users to create accounts or submit personal information
+to PhotoFix. The app's audience and the treatment of advertising for children
+must be reviewed before release. Third-party advertising services may apply
+their own age-related and consent requirements. A parent or guardian with a
+privacy question can contact the developer using the contact details added
+before publication.
+
+## Changes to this policy
+
+This policy may be updated when PhotoFix's features, SDKs, or data practices
+change. Before publication, provide a real, publicly accessible policy URL in
+the app and state the effective date at the top of the published policy.
+
+## Contact
+
+**Developer contact:** [Developer contact email to be added]
+
